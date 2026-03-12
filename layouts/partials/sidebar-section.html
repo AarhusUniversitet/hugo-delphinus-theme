@@ -1,0 +1,20 @@
+{{- $section := .section -}}
+{{- $current := .current -}}
+{{- /* Regular pages in this section */ -}}
+{{- range $section.RegularPages.ByWeight -}}
+    {{- if and .Title (not (eq .File.LogicalName "_index.md")) -}}
+<a href="{{ .RelPermalink }}" class="nav__item{{ if eq $current.RelPermalink .RelPermalink }} nav__item--active{{ end }}">{{ .Title }}</a>
+    {{- end -}}
+{{- end -}}
+{{- /* Sub-sections as collapsible details */ -}}
+{{- range $section.Sections.ByWeight -}}
+    {{- $isAncestor := $current.IsDescendant . -}}
+    {{- $isActive := eq $current.RelPermalink .RelPermalink -}}
+<details{{ if or $isAncestor $isActive }} open{{ end }}>
+    <summary class="nav__item{{ if $isActive }} nav__item--active{{ end }}">{{ .Title }}</summary>
+    <div class="nav__items nav__items--nested">
+        <a href="{{ .RelPermalink }}" class="nav__item{{ if $isActive }} nav__item--active{{ end }}">Overview</a>
+        {{- partial "sidebar-section" (dict "section" . "current" $current) -}}
+    </div>
+</details>
+{{- end -}}

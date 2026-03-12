@@ -1,0 +1,10 @@
+name = "Delphinus"
+license = "MIT"
+licenselink = "https://github.com/AarhusUniversitet/hugo-delphinus-theme/blob/main/LICENSE"
+description = "A Hugo theme using Aarhus University's Delphinus Design System"
+homepage = "https://delphinus.au.dk/"
+min_version = "0.112.0"
+
+[author]
+  name = "Your Name"
+  homepage = "https://github.com/AarhusUniversitet/hugo-delphinus-theme"

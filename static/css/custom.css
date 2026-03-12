@@ -1,0 +1,22 @@
+/* Override default max-width on text elements */
+.page__content__block p,
+.page__content__block ul,
+.page__content__block ol,
+.page__content__block li {
+    max-width: none;
+}
+
+/* Hide Pagefind search input on results page - navbar has search already */
+#search .pagefind-ui__form > .form__field,
+#search .pagefind-ui__search-input,
+#search .pagefind-ui__search-clear {
+    display: none;
+}
+
+/* Sidebar: collapsible nested sections */
+.nav--vertical details { width: 100%; }
+.nav--vertical summary.nav__item { list-style: none; cursor: pointer; font-weight: 700; }
+.nav--vertical summary.nav__item::-webkit-details-marker { display: none; }
+.nav--vertical .nav__items--nested { padding: 0; margin-left: 12px; }
+.nav--vertical { overflow-x: hidden; }
+.nav--vertical .nav__items { overflow-x: hidden; }

@@ -1,0 +1,11 @@
+<nav class="nav nav--vertical nav--has-active-item" aria-label="Documentation navigation">
+    <div class="nav__items">
+    {{- $docSection := .Site.GetPage "documentation" -}}
+    {{- if $docSection -}}
+        {{- range $docSection.Sections.ByWeight -}}
+        <h2 class="nav__header">{{ .Title }}</h2>
+        {{- partial "sidebar-section" (dict "section" . "current" $) -}}
+        {{- end -}}
+    {{- end -}}
+    </div>
+</nav>
