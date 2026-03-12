@@ -49,25 +49,25 @@ Add these parameters to your `hugo.toml`:
 | `footerSubtitle` | Text displayed next to the site title in the footer |
 | `organization` | Organization name shown in the footer |
 
-## Content Structure
+## A fianl configuration example
 
-The theme expects the following content structure:
+```toml
+baseURL = 'https://example.azurestaticapps.net/'
+languageCode = 'en-us'
+title = 'My Site Title'
+theme = 'delphinus'
 
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[params]
+  description = "My site description"
+  footerSubtitle = "My footer subtitle"
+  organization = "Aarhus University"
 ```
-content/
-├── documentation/       # Main docs (rendered in sidebar navigation)
-│   ├── _index.md
-│   ├── section-1/
-│   │   ├── _index.md
-│   │   └── page.md
-│   └── section-2/
-│       ├── _index.md
-│       └── page.md
-├── posts/               # Blog posts
-│   ├── _index.md
-│   └── my-post.md
-└── search.md            # Search page (layout: single)
-```
+
 ## Search (Pagefind)
 
 After building your Hugo site, run Pagefind to index the content:
