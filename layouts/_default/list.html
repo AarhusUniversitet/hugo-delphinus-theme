@@ -1,13 +1,19 @@
 {{ define "main" }}
-<h1 data-pagefind-meta="title">{{ .Title }}</h1>
-{{ .Content }}
+<article>
+    <header>
+        <h1 data-pagefind-meta="title">{{ .Title }}</h1>
+        {{ partial "byline.html" . }}
+    </header>
+
+    {{ .Content }}
 
 {{ if .Pages }}
-<h2>Subpages</h2>
-<ul>
-    {{ range .Pages }}
-    <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+    <h2>Subpages</h2>
+    <ul>
+        {{ range .Pages }}
+        <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+        {{ end }}
+    </ul>
     {{ end }}
-</ul>
-{{ end }}
+</article>
 {{ end }}
