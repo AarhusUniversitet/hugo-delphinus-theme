@@ -2,6 +2,8 @@
 
 A Hugo theme based on Aarhus University's [Delphinus Design System](https://delphinus.au.dk/).
 
+This repo has been branched out from: https://github.com/riisendk/hugo-delphinus-template which was the initial implementation of the theme. But it also had content in it so couldnt be used directly by others.
+
 ## Features
 
 - Responsive layout with sidebar navigation
@@ -66,23 +68,6 @@ content/
 │   └── my-post.md
 └── search.md            # Search page (layout: single)
 ```
-
-## Shortcodes
-
-### Button
-```markdown
-{{</* button url="/link" text="Click here" */>}}
-{{</* button url="/link" text="Secondary" type="dimmed" */>}}
-```
-
-### Callout
-```markdown
-{{</* callout type="info" */>}}Info message{{</* /callout */>}}
-{{</* callout type="warning" */>}}Warning{{</* /callout */>}}
-{{</* callout type="error" */>}}Error{{</* /callout */>}}
-{{</* callout type="success" */>}}Success{{</* /callout */>}}
-```
-
 ## Search (Pagefind)
 
 After building your Hugo site, run Pagefind to index the content:
@@ -91,11 +76,3 @@ After building your Hugo site, run Pagefind to index the content:
 hugo --minify
 npx pagefind --site public
 ```
-
-## Requirements
-
-- Hugo >= 0.112.0
-
-## License
-
-MIT — see [LICENSE](LICENSE).
