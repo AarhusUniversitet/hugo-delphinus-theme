@@ -1,3 +1,4 @@
+{{ if not .Params.hide_byline }}
 {{ if or (not .Date.IsZero) .Params.author .Params.tags }}
 <div>
     {{ if not .Date.IsZero }}
@@ -6,4 +7,5 @@
     {{ with .Params.author }}{{ if not $.Date.IsZero }}· {{ end }}By {{ . }}{{ end }}
     {{ with .Params.tags }}{{ if or (not $.Date.IsZero) $.Params.author }}· {{ end }}Tags: {{ range $index, $tag := . }}{{ if $index }}, {{ end }}<a href="{{ "tags/" | relURL }}{{ $tag | urlize }}/">{{ $tag }}</a>{{ end }}{{ end }}
 </div>
+{{ end }}
 {{ end }}
