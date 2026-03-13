@@ -1,11 +1,10 @@
 {{ define "main" }}
 <article>
-    <h1 data-pagefind-meta="title">Welcome to AU Documentation using Delphinus</h1>
+    <h1 data-pagefind-meta="title">Welcome to {{ .Site.Title }}</h1>
     
     <div class="row">
         <div class="row__item">
-            <p>This documentation site is built using Hugo with Aarhus University's Delphinus Design System.</p>
-            <p>Have a look around. Enjoy!</p>
+            <p>{{ .Site.Params.description }}</p>
         </div>
         <div class="row__item">
             <aside aria-label="Contact options" class="box theme--background-secondary row__item-content">
@@ -14,12 +13,12 @@
                         <span class="icon" data-icon=""></span>
                         Say hi!
                     </span>
-                    Ideas? Questions? Feedback?
+                    Questions or feedback?
                 </h2>
                 <p>
                     Please reach out to us at the following contacts:
-                    <span class="u-avoid-wrap">Mit navns navn </span>
-                    at <a href="mailto:mail@mail.dk">mail@mail.dk</a>
+                    <span class="u-avoid-wrap">{{ .Site.Params.contactName }}</span>
+                    at <a href="mailto:{{ .Site.Params.contactEmail }}">{{ .Site.Params.contactEmail }}</a>
                 </p>
             </aside>
         </div>

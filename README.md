@@ -41,6 +41,8 @@ Add these parameters to your `hugo.toml`:
   description = "Your site description"
   footerSubtitle = "Documentation"
   organization = "Aarhus University"
+  contactName = "John Doe"
+  contactEmail = "example@example.com"
 ```
 
 | Parameter | Description |
@@ -48,6 +50,8 @@ Add these parameters to your `hugo.toml`:
 | `description` | Shown in the footer and in the HTML meta description |
 | `footerSubtitle` | Text displayed next to the site title in the footer |
 | `organization` | Organization name shown in the footer |
+| `contactName` | Name of the contact person |
+| `contactEmail` | Email address of the contact person |
 
 ## A fianl configuration example
 
@@ -66,6 +70,8 @@ theme = 'delphinus'
   description = "My site description"
   footerSubtitle = "My footer subtitle"
   organization = "Aarhus University"
+  contactName = "John Doe"
+  contactEmail = "example@example.com"
 ```
 
 ## Search (Pagefind)
