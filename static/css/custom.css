@@ -20,3 +20,9 @@
 .nav--vertical .nav__items--nested { padding: 0; margin-left: 12px; }
 .nav--vertical { overflow-x: hidden; }
 .nav--vertical .nav__items { overflow-x: hidden; }
+
+/* Fix code block overflow */
+.page__content__block pre {
+    max-width: 100%;
+    overflow-x: auto;
+}
