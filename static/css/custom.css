@@ -21,8 +21,13 @@
 .nav--vertical { overflow-x: hidden; }
 .nav--vertical .nav__items { overflow-x: hidden; }
 
-/* Fix code block overflow */
-.page__content__block pre {
+/* Fix code block overflow (Hugo Chroma wraps lines in display:flex spans) */
+.page__content__block .highlight {
     max-width: 100%;
     overflow-x: auto;
+}
+.page__content__block .highlight > pre {
+    overflow-x: visible;
+    min-width: 100%;
+    width: max-content;
 }
