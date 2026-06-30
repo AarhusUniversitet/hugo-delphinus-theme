@@ -1,11 +1,13 @@
 {{ define "main" }}
 <article>
-    <header>
-        <h1 data-pagefind-meta="title">{{ .Title }}</h1>
-        {{ partial "byline.html" . }}
-    </header>
+    <div class="typography--dense">
+        <header>
+            <h1 data-pagefind-meta="title">{{ .Title }}</h1>
+            {{ partial "byline.html" . }}
+        </header>
 
-    <hr>
+        <hr>
+    </div>
 
     {{ .Content }}
 </article>
